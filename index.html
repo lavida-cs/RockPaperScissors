@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>RPS Game</title>
+   <!-- Css -->
+   <link rel="stylesheet" href="/CSS/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+   
+   <!-- Game Header -->
+   <div class="header">
+      <div class="game-logo">
+         <img src="/images/logo.svg">
+      </div>
+      <div class="score-card">
+         <small class="score-text">SCORE</small>
+         <p class="score-value" id="scoreValue">0</p>
+      </div>
+   </div>
+   
+   
+   
+   <!-- Game Wrapper -->
+   <div class="game-wrapper">
+      <div class="game-state" id="gameState">
+         <img src="/images/bg-triangle.svg" alt="" class="triangle-img">
+         <button class="game-btns game-btn-scissors Scissors-bd-color" data-choice="Scissors">
+            <img src="/images/icon-scissors.svg" alt="">
+         </button>
+         <button class="game-btns game-btn-paper Paper-bd-color" data-choice="Paper">
+            <img src="/images/icon-paper.svg" alt="">
+         </button>
+         <button class="game-btns game-btn-rock Rock-bd-color" data-choice="Rock">
+            <img src="/images/icon-rock.svg" alt="">
+         </button>
+      </div>
+      
+      <div class="selected-state hidden" id="selectedState">
+         <div>
+            <button id="playerSpotPicked" class="player-spot-picked">
+               <img id="playerPickedImg" />
+            </button>
+            <p class="you-picked-text">YOU PICKED</p>
+         </div>
+         
+         <div>
+            <div id="houseSpotEmpty" class="house-spot-empty"></div>
+            <button id="houseSpotPicked" class="house-spot-picked hidden">
+               <img id="housePickedImg" src="/images/icon-scissors.svg" alt="">
+            </button>
+            <p class="house-picked-text"> THE HOUSE PICKED</p>
+         </div>
+         
+      </div>
+      
+      <div class="result-modal hidden" id="resultModal">
+         <p class="result-text" id="resultText">YOU WIN</p>
+         <button class="play-again-btn" id="playAgainBtn">
+            PLAY AGAIN
+         </button>
+      </div>
+      
+   </div>
+   
+   
+   
+   
+   <!-- Rules Wrapper -->
+   <button class="rules-btn" id="rulesBtn">
+      RULES
+   </button>
+   
+   <div class="rules-modal hidden" id="rulesModal">
+      <p class="rules-text">RULES</p>
+      <img class="rules-img" src="/rock-paper-scissors-master/images/image-rules.svg" alt="">
+      <button class="close-rules-modal-btn" id="closeRulesModalBtn">
+         <img src="/images/icon-close.svg" alt="">
+      </button>
+   </div>
+   
+   <div class="overlay hidden" id="overlay"></div>
+   
+   
+   <!-- -->
+   <script src="/JAVASCRIPT/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
